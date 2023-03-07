@@ -46,7 +46,7 @@ def index():
     if isinstance(pubsub_message, dict) and "data" in pubsub_message:
         name = base64.b64decode(pubsub_message["data"]).decode("utf-8").strip()
 
-    print(f"The file '{name}!' has been created")
+    print(f"The file '{name}' has been created")
 
     return ("", 204)
 
